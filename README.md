@@ -89,7 +89,7 @@ result = cropper.crop(image, 300, 300, boosts=[
 print(result['top_crop'])
 ```
 
-Each `Boost` is a rectangle in the original image's pixel coordinates with a `weight` controlling its influence. Multiple boosts can be supplied and their weights accumulate in overlapping areas. `SmartCrop.boost_weight` (default `100.0`) scales all boost contributions globally.
+Each `Boost` is a rectangle in the original image's pixel coordinates with a `weight` controlling its influence, in the same units as the other scoring weights (`skin_weight=1.8`, `saturation_weight=0.3`). Multiple boosts can be supplied and their weights accumulate in overlapping areas.
 
 ## Testing
 

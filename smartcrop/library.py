@@ -37,7 +37,6 @@ class SmartCrop:  # pylint:disable=too-many-instance-attributes
     skin_color: tuple[float, float, float] = DEFAULT_SKIN_COLOR
     skin_threshold: float = 0.8
     skin_weight: float = 1.8
-    boost_weight: float = 100.0
 
     def apply_boosts(
         self,
@@ -457,7 +456,7 @@ class SmartCrop:  # pylint:disable=too-many-instance-attributes
         )
 
         if boost_map is not None:
-            precomputed += boost_map * self.boost_weight
+            precomputed += boost_map
 
         return precomputed
 
